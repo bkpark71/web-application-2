@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numArr = [10,20,30,40,50];
+        console.log(numArr.length)
+        numArr[10] = 110;
+        console.log(numArr.length)
+        numArr.forEach(element => {
+            console.log(element);
+        });
+        numArr.length = 20;
+        console.log(numArr.length)
+        numArr.length = 3;
+        numArr.forEach(element => {
+            console.log(element);
+        });
+    </script>
+</body>
+</html>

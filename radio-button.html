@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="city" value=""><br>
+        <input type="radio" name="city" value="seoul" onclick="check()">서울
+        <input type="radio" name="city" value="pusan" onclick="check()">부산
+        <input type="radio" name="city" value="chuncheon" onclick="check()">춘천
+        <input type="submit" value="제출">
+    </form>
+    <script>
+        function check(){
+            let cities = document.getElementsByName("city");
+            for (let i = 0; i < cities.length; i++) {
+                if(cities[i].checked == true)
+                    document.getElementById("city").value = cities[i].value;
+            }
+        }
+    </script>
+</body>
+</html>

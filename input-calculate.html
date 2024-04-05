@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("숫자 a 를 입력하세요");
+        let b = prompt("숫자 b 를 입력하세요");
+        if((a != null && isFinite(a)) && (b != null && isFinite(b))) {
+            a = parseInt(a);
+            b = parseInt(b);
+            console.log(adder(a,b));
+        } else {
+            console.log("숫자가 아닙니다.");
+        }
+
+        function adder(i,j) {
+            return i+j;
+        }
+    </script>
+</body>
+</html>

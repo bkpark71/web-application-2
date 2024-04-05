@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width : 100vw;
+            height : 100vh;
+        }
+        @media screen and (min-width:1024px) {
+            #image {
+                background-image: url(images/bg0.jpg); 
+            }
+        }
+        @media screen and (max-width:1024px) {
+            #image {
+                background-image: url(images/bg1.jpg); 
+            }
+        }
+        @media screen and (max-width:768px) {
+            #image {
+                background-image: url(images/bg2.jpg); 
+            }
+        }
+        @media screen and (max-width:320px) {
+            #image {
+                background-image: url(images/bg3.jpg); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="image"></div>
+</body>
+</html>

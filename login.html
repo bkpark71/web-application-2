@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color : blueviolet;
+            background-color: beige;
+
+            border: solid 2px;
+            border-color:black;
+        }
+        input[type=text] {
+            color:red;
+            border : 1px solid skyblue;
+            border-radius: 5px;
+        }
+        input:focus {
+            font-size:120%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="test1.html" method="get">
+            <p><label>아이디<input type="text" name="id" placeholder="아이디를 입력하세요"></label> </p>
+            <p><label for="password">암호</label> <input type="password" name="password" id="password" 
+                placeholder="아이디를 입력하세요"></p>
+            <p><label for="information">학생정보</label>
+                <textarea name="information" id="information" cols="30" rows="10">
+                    기본정보
+                </textarea>
+            </p>
+            <input type="submit" value="로그인">
+        </form>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>방문시간에 따른 배경색 변경</h2>
+    <hr>
+    <p >현재시간 : <span id = "time"></span> </p>
+    <script>
+        const now = new Date();
+        console.log(now);
+        //console.log(now.getSeconds());
+        document.getElementById("time").innerHTML = 
+            now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+
+        if(now.getSeconds() % 2 == 0) {
+            document.body.style.backgroundColor = "violet";
+        } else {
+            document.body.style.backgroundColor = "lightskyblue";
+        }
+
+    </script>
+</body>
+</html>

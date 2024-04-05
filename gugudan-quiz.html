@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 랜덤한 정수값을 4*3 = ? (랜덤한 정수값을 이용해서 퀴즈를 생성하고,)
+    사용자가 정답을 맞추면 정답입니다.  -->
+    <script>
+        // for (let i = 0; i < 10; i++) {
+        //     console.log(Math.ceil(Math.random() * 9));
+        // }
+
+        function randInt() {
+            return Math.ceil(Math.random() * 9);
+        }
+        let question = randInt() + "*" + randInt() ;
+        let answer = prompt(question + " = ?");
+        document.write("<h3>구구단 퀴즈</h3><hr>");
+        let result = eval(question)
+        if(isFinite(answer) && answer == result) {
+            document.write("정답입니다. " + question + "=" + result + "입니다.");
+        } else {
+            document.write("오답입니다. " + question + "=" + result + "입니다.");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 만들기</title>
+    <style>
+        h3,li {
+            color:brown;
+        }
+        li {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #list {
+            background-color: mistyrose;
+        }
+        div.main {
+            background-color: aliceblue;
+        }
+        /* li>strong {
+            color:darkblue;
+        } */
+        div strong {
+            color:darkblue;
+        }
+        li:hover {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body class="main">
+    <h3>Web Programming</h3>
+    <hr>
+    <div class="main">
+        이번학기 학습 내용
+        <ul id="list">
+            <li>HTML5</li>
+            <li><strong>CSS</strong></li>
+            <li>JAVASCRIPT</li>
+        </ul>
+    </div>
+    <div class="sub">
+        <p style="color:magenta; font-size: 30px;">2024년 1학기</p>
+        <p style="color:green;">안녕하세요
+            <em style="font-size: 25px;">자식입니다.</em>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>과일을 선택하면 해당 이미지가 나타납니다.</h3>
+    <hr>
+    <select name="fruits" id="fruits" onchange="changeText()">
+        <option value="0">==선택==</option>
+        <option value="1">딸기</option>
+        <option value="2">바나나</option>
+        <option value="3">사과</option>
+    </select>
+    <input type="text" value="" id="text">
+    <img src="" alt="" id="img">
+    <script>
+        function changeText(){
+            let select = document.getElementById("fruits");
+            //console.log(select.selectedIndex);
+            let image ="";
+            for (let i = 0; i < select.options.length; i++) {
+                if(select.options[i].selected) {
+                    switch(select.options[i].value) {
+                        case "1" :
+                            image = "images/strawberry.jpg";
+                            break;
+                        case "2":
+                            image = "images/banana.jpg";
+                            break;
+                        case "3":
+                            image = "images/apple.jpg";
+                            break;
+                    }
+                    document.getElementById("img").src = image;
+                    document.getElementById("text").value = select.options[i].value ;
+                }; 
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span { 
+            color : green;
+            font-size:30px;
+            display : block;
+            border-width : 1px ;
+            border-style : dotted ;
+            border-color: margenta;
+        } */
+    </style>
+    <script>
+        function change() {
+            //let span = document.getElementById("firstSpan");
+            //let spans = document.getElementsByTagName("span");
+            let spans = [...parent.getElementsByTagName('span')];
+            console.log(typeof(spans));
+            for(let i=0; i<spans.length; i++){
+                spans[i].style.color = "green";
+                spans[i].style.display = "block";
+                spans[i].style.fontSize = "30px";
+                spans[i].style.border = "3px dotted magenta";
+            }
+            // spans.forEach(
+            // (element) => {
+            //     console.log(element.style.color);
+            //     element.style.color = "green";
+            //     console.log(element.style.color);
+            //     element.style.display = "block";
+            //     element.style.fontSize = "30px";
+            //     element.style.border = "3px dotted magenta";
+            //     }
+            // );
+        }
+    </script>
+
+</head>
+<body>
+    <h3>DOM 객체 p의 프로퍼티,스타일,이벤트리스너</h3>
+    <hr>
+    <p id="firstP"
+        style="color:blue;background-color:yellow;"
+        onclick="this.style.color='green'"
+    >
+        이것은 <span id="firstSpan">처음 문장입니다.</span>   
+        <!-- style="color:red" -->
+    </p>
+    <p id="secondP"
+    style="color:blue;background-color:yellow;"
+    onclick="this.style.color='green'"
+    >
+        이것은 <span style="color:red">다음 문장입니다.</span>
+    </p>
+    <button onclick="change()">스타일 변경</button>
+    <script>
+        // const p = document.getElementById("firstP");
+        // const text = `
+        // p.id = ${p.id} 
+        // p.tagName = ${p.tagName} 
+        // p.innerHTML = ${p.innerHTML} 
+        // p.innerText = ${p.innerText} 
+        // p.style.backgroundColor = ${p.style.backgroundColor} 
+        // p.style.color = ${p.style.color} 
+        // p.childElement = ${p.childElementCount}
+        // 너비 = ${p.offsetWidth} 
+        // 높이 = ${p.offsetHeight}`
+
+        // console.log(text);
+        //p.innerHTML="이것은 <span style='color:red'>동적으로 변경한 문장입니다.</span>"
+    </script>
+</body>
+</html>

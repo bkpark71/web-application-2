@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let width = 1; 
+        function down(obj){
+            obj.style.fontStyle = "italic";
+        }
+        function up(obj){
+            obj.style.fontStyle = "normal";
+        }
+        function over(obj){
+            obj.style.borderColor = "violet";
+        }
+        function out(obj){
+            obj.style.borderColor = "lightgray";
+        }
+        function wheel(e, obj){
+            if(e.wheelDelta < 0) {
+                width--;
+                if(width < 0) width = 0;
+            } else {
+                width++;
+                if(width > 100) width = 100;
+            }
+            obj.style.borderStyle = "ridge";
+            obj.style.borderWidth = width + "px";
+        }
+        function hideMenu(){
+            alert("오른쪽 클릭<컨텍스트 메뉴>금지");
+            return false;
+        }
+        document.oncontextmenu=hideMenu;
+    </script>
+</head>
+<body>
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr>
+    <div>마우스 관련
+        <span
+            onmousedown ="down(this)"
+            onmouseup = "up(this)"
+            onmouseover = "over(this)"
+            onmouseout = "out(this)"
+            onwheel = "wheel(event, this)"
+        >이벤트</span>
+    </div>
+
+    <div>이미지 위에 마우스를 움직이면 mousemove 이벤트가 발생, 마우스 위치 보여줌
+        
+        
+    </div>
+    <img src="images/bg5.jpg" width="50%" height="50%" alt="bg5" onmousemove="where(event)"><br>
+    <p id="text"></p>
+    <script>
+        function where(e) {
+            let text = `
+            버튼 = ${e.button} <br>
+            (x,y) = (${e.x}, ${e.y}) <br>
+            (clientX, clientY) = (${e.clientX}, ${e.clientY}) <br>
+            (offsetX, offsetY) = (${e.offsetX}, ${e.offsetY}) <br>
+            (screenX, screenY) = (${e.screenX}, ${e.screenY}) <br>
+            `;
+            document.getElementById("text").innerHTML= text;
+        }
+    </script>
+</body>
+</html>

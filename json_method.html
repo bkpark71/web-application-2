@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const jsobj = [
+            {
+                name : "a",
+                age : 10
+            },
+            {
+                name : "b",
+                age : 20
+            }
+        ]
+
+        const outputA = JSON.stringify(jsobj);
+        console.log(typeof(outputA));
+        console.log(outputA);
+        console.log(outputA.length);
+
+
+        const outputB = JSON.parse(outputA);
+        console.log(typeof(outputB));
+        console.log(outputB);
+        console.log(outputB.length);
+
+        const str = '{"name":"c", "age":30}';
+        const str1 = "{'name':'c', 'age':30}";
+        const outputC = JSON.parse(str1);
+        console.log(typeof(outputC));
+        console.log(outputC);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

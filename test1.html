@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>웹 페이지 구성요소</title>
+	<style>
+		@import url(mystyle.css);
+	</style>
+	<script>
+		function show() { 
+			document.getElementById("fig").src = "Tim.jpg";
+		}
+
+		function hide() { 
+			document.getElementById("fig").src = "";
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<a href="http://www.naver.com" style="text-decoration:none;">naver</a>
+		<a href="http://www.google.com" style="text-decoration:none;">google</a>
+	</nav>
+	<header>
+		<h1 id="tim" onmouseover = "show()"
+	 				 onmouseout = "hide()">
+	 	팀버너스리
+		</h1>
+	</header>
+	<hr>
+	<img id="fig" src="Tim.jpg" />
+팀 버너스리 경(영어: Sir Tim Berners-Lee, OM, KBE, FRS, 1955년 6월 8일 ~ )은 영국의 컴퓨터 과학자이다.
+
+1989년 월드 와이드 웹의 하이퍼텍스트 시스템을 고안하여 개발했다. 인터넷의 기반을 닦은 여러 공로로 웹의 아버지라고 불리는 인물 중 하나이다.
+
+URL, HTTP, HTML 최초 설계와 구현도 CERN 시절에 동료였던 로베르 카이오(Robert Cailliau) 등과 함께 그가 주도한 것이다.
+
+차세대 웹 기술인 시맨틱 웹 기술의 표준화에 힘쏟고 있다.
+</body>
+</html>

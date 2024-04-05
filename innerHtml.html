@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>innerHTML 콘텐츠 동적 변경하기</h3>
+    <hr>
+    <p id="p" onmouseover="imageChange()">
+        여기를 <span style="color:red;"></span>클릭하세요</p>
+    <script>
+        function imageChange() {
+            document.getElementById("p").innerHTML = "<img src='images/cup-8.jpg'>";
+        }
+    </script>
+</body>
+</html>

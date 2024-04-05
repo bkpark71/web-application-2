@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.naver.com" onclick="return check()">네이버</a>
+
+    <a href="http://www.naver.com" onclick="noAction(event)">네이버</a>
+
+    <form action="#">
+        <input type="text" name="id">
+        <input type="checkbox" name="chk1">빵(checked)<br>
+        <input type="checkbox" name="chk2"
+            onclick="noAction(event)">술(unchecked)
+        <input type="submit" value="submit" onclick="noAction(event)">
+    </form>
+    <script>
+        function check(){
+            let ret = confirm("네이버로 이동하시겠습니까?");
+            return ret;
+        }
+
+        function noAction(e) {
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

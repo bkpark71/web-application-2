@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        [10,20,30].forEach(
+            (value, index)  => console.log(`value = ${value} , index = ${index}`)
+        )
+
+        let outputA = [1,2,3].map((item) => {
+            return item * item;
+        });
+
+        outputA.forEach(i => console.log(i));
+        
+        let outputB = [1,2,3].filter(i => {return i % 2 == 1})
+
+        outputB.forEach(i => console.log(i));
+        console.log(outputB);
+
+        for (const item of outputA) {
+            console.log(item);
+        }
+
+        function Account(owner, number, balance) {
+            this.owner = owner;
+            this.number = number;
+            this.balance = balance;
+        }
+        let account = new Account("h", "1", 0);
+        for (const key in account) {
+            console.log(`${key} : ${account[key]}`);
+        }
+
+    </script>
+</body>
+</html>

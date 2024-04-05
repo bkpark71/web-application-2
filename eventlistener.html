@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            const p = document.getElementById("p");
+        // p.onmouseover = over;
+        // p.onmouseout = out;
+            p.addEventListener("mouseover", over);
+            p.addEventListener("mouseout", out);
+
+            function over() {
+                p.style.backgroundColor = "yellowgreen";
+            }        
+
+            function out() {
+                p.style.backgroundColor = "white";
+            }
+        }
+    
+    </script>
+</head>
+<body onload = "init()">
+    <p id="p">마우스를 올리면 색깔이 변경됨</p>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            float:right;
+        }
+        .listChild {
+            background-color: white;
+            color:black;
+            margin:5px;
+            border:1px solid gray;
+        }
+        #title {
+            border:1px solid black;
+            background-color: gray;
+            color:white; 
+            text-align: center;
+        }
+        #listParent{
+            list-style: none;
+        }
+    </style>
+</head>
+<body id="parent">
+    <h3>DIV 객체 동적으로 생성하고 삭제하기</h3>
+    <hr>
+    <a href="javascript:createDIV()">DIV 태그 생성하기</a>
+
+    <form action="" onsubmit="return false">
+        <input type="text" value="" id="input">
+        <button onclick="addList()">추가</button>    
+    </form>
+    <p id="title">TodoList</p>
+    <ul id="listParent"></ul>
+    <script>
+        function createDIV(){
+           //console.log("DIV tag를 생성합니다.");
+           let parent = document.getElementById("parent");
+           let child = document.createElement("div");
+           child.innerHTML="새로 생성된 div 입니다.";
+           child.setAttribute("id", "new");
+           child.style.backgroundColor = "yellow";
+           child.onclick = function () {
+                parent.removeChild(this);
+           }
+           parent.appendChild(child);
+        }
+
+        function addList(){
+           let parent = document.getElementById("listParent");
+           let list = document.createElement("li");
+           let input = document.getElementById("input");
+           list.innerHTML=input.value;
+           list.setAttribute("class", "listChild");
+           input.value="";
+           let button = document.createElement("button");
+           button.innerHTML = "X"
+           button.backgroundColor="gray";
+           button.setAttribute("class", "btn");
+           button.onclick = function () {
+                let p = this.parentElement.parentElement;
+                p.removeChild(this.parentElement);
+            }
+           list.appendChild(button);
+           parent.appendChild(list);
+
+        //    child.setAttribute("id", "new");
+        //   child.style.backgroundColor = "yellow";
+  
+
+        }
+    </script>
+</body>
+</html>

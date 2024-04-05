@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: gainsboro;
+}
+#wrapper {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap:1rem;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 1px 2px 5px 2px grey;
+    /* width:25rem;
+    height:25em; */
+}
+.card > header {
+    padding : 0.3rem;
+}
+.card > p {
+    padding : 0.5rem;
+}
+.card > img {
+    max-width: 100%;
+}

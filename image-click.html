@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/image-click-fn.js">
+        //document.getElementById("img").src='images/cup-2.jpg';
+    </script>
+</head>
+<body>
+    <h2>이미지 클릭</h2>
+
+    <!-- <img src="images/cup-1.jpg" alt="cup" onclick="this.src='images/cup-2.jpg'"> -->
+    <!-- <img src="images/cup-1.jpg" alt="cup" 
+        onmouseover="this.src='images/cup-1.jpg'"
+        onmouseout="this.src='images/cup-2.jpg'"
+    > -->
+
+    <img id="img" src="" alt="cup"
+        onmouseover="over(this)"
+        onmouseout="out(this)">
+
+    <h3>
+        <a href="javascript:alert('클릭했습니다.')">클릭하세요</a>
+    </h3>
+
+</body>
+</html>

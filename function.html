@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function adder(a , b) {
+            return a + b;
+        }
+
+        let result = adder(10, 20);
+        console.log("10 + 20 = " + result);
+
+        result = adder("10", "20");
+        console.log("'10' + '20' = " + result);
+
+
+        // let anony_func = function () {
+        //     console.log("익명함수입니다.");
+        // }
+        let anony_func = () => console.log("익명함수입니다.");
+        
+        anony_func();
+        console.log(anony_func)
+    </script>
+</body>
+</html>

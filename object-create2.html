@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let account = {
+            owner : "홍길동",
+            number : "1111",
+            balance : 30000,
+            inquiry : 
+                function () {
+                    return this.balance;
+                },
+            withdraw : 
+                function (money) {
+                    if(money <= this.balance)
+                        this.balance -= money;
+                    return this.balance;
+                },
+            deposit :
+            function (money) {
+                this.balance += money;
+                return this.balance;
+            }
+        }
+
+        console.log(account.inquiry());
+        console.log(account.owner + "," + account.number + "," + account.balance);
+        console.log(account.deposit(1000));
+        console.log(account.withdraw(20000));
+        console.log(account.withdraw(20000));
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+header {color:blueviolet;}
+h1 {text-align: center;}
+nav {
+    background-color: bisque;
+    color:blue;
+    font-size: 100px;
+}
+span {
+    color : red;
+    font-size: 20px;
+}
+body {background-color : linen; }

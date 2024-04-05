@@ -1,0 +1,81 @@
+/* 문서 공통 */
+a {
+    text-decoration: none;
+    color : black;
+}
+ul {
+    list-style: none;
+}
+#container {
+    margin:0 auto;
+    width:1200px;
+}
+/* 헤더 영역 */
+header {
+    width:100%;
+    height:70px;
+    border-bottom: 1px solid black;
+}
+nav {
+    /* background-color: beige; */
+    width : 1200px;
+    height : 60px;
+    line-height: 95px;
+}
+nav a:hover {
+    color:blue;
+}
+nav li {
+    display : inline-block;
+    margin: 0px 10px;
+}
+nav li > a {
+    font-weight: 600;
+}
+
+#logo {
+    float:left;
+    line-height: 0px;
+}
+
+/* 본문 */
+main {
+    width:1000px;
+    
+    margin:50px auto;
+}
+main > section {
+    margin : 60px;
+    height : 200px;
+}
+
+section img {
+    float:left;
+    margin-right:40px;
+}
+.schedule {
+    color : darkgray
+}
+/* 푸터 */
+footer {
+    width:1200px;
+    /* height:100px; */
+}
+#bottomMenu li {
+    text-align: right;
+}
+#bottomMenu {
+    width:100%;
+    height:20px;
+    margin-left:60px;
+}
+#sns{
+    border-top: 1px solid grey; 
+}
+#information {
+    border-top: 1px solid grey; 
+}
+
+#bottomMenu>p {
+    padding-top : 20px;
+}
