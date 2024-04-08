@@ -1,0 +1,63 @@
+body {
+    height : 2000px;
+    margin:0px; 
+}
+
+#favWrap {
+    background: url('../images/2024_4_dreamy_pick_bg.jpg')
+                fixed no-repeat;
+    position:absolute;
+    width:2000px;
+    height:1000px;
+}
+
+#favImg {
+    position:absolute;
+    top:100px;
+    right:200px; 
+}
+
+.fav-text {
+    color:white;
+    position:absolute;
+}
+
+.bg-text {
+    font-size: 8.5em;
+    left:400px;
+    top:100px;
+}
+
+.md-text {
+    font-size: 7em;
+    left:400px;
+    top:260px;
+}
+
+.sm-text {
+    font-size: 4em;
+    left:400px;
+    top:440px;
+}
+
+@keyframes slide-forward{
+    from {
+        left:-300px;
+        opacity: 0.0;
+    }
+    to {
+        left:400px;
+        opacity: 1.0;
+    }
+}
+
+@keyframes slide-backward{
+    from {
+        left:400px;
+        opacity: 1.0;
+    }
+    to {
+        left:-300px;
+        opacity: 0.0;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #img {
+            scroll-behavior : smooth;
+        }
+        #prev {
+            float:left;
+        }
+        #next {
+            float:right;
+        } */
+    </style>
+    <script>
+        // let images = [
+        //     "images/bg0.jpg",
+        //     "images/bg1.jpg",
+        //     "images/bg2.jpg",
+        //     "images/bg3.jpg"
+        //     ];
+        // //console.log(images);
+        // let currentIndex=0;
+        // function changeImage(obj) {
+        //     currentIndex++;
+        //     console.log(currentIndex);
+        //     index = currentIndex % images.length;
+        //     obj.src = images[index];
+        //     obj.width="600";
+        //     obj.height="450";
+        // }
+
+        // function changeImages_auto(){
+        //     setInterval(() => {
+        //         currentIndex++;
+        //         let img = document.getElementById("img");
+        //         img.src = images[currentIndex % images.length];
+        //         img.width="600";
+        //         img.height="450";
+        //     },3000);
+        // }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .carousel-wrapper {
+            /* width:500px; */
+            width:100vw;
+            height:100vh;
+            /* height:300px;           */
+            overflow: hidden; /* 현재 구역을 제외한 나머지 hidden 처리 */
+            /* position:relative; */
+        }
+        .carousel-wrapper > .carousel {
+            width:600px;
+            height:400px;
+            display:flex;
+            transform:translate3d(0,0,0);/* 처음에 0 위치에서 시작*/
+            transition:transform 0.5s;
+        }
+        .carousel-wrapper > .carousel > img {
+            /* width : 500px;
+            height : 300px; */
+            width:100%;
+            height:100%;
+        }
+        /* #slides {
+            width : 100vw;
+            height : 100%;
+            display:flex; /* 이미지를 x축으로 정렬*/
+            transform:translate3d(0,0,0);/* 처음에 0 위치에서 시작*/
+            transition:transform 0.2s;
+            /* position:absolute; */
+        }
+        #slides > img {
+            width : 500px;
+            height : 300px;
+            float : left;
+            object-fit:contain;
+        }
+        #slideButton {
+            width:600px;
+            height:10px;
+        } */
+    </style>
+</head>
+<body>
+    <h3>사진을 클릭하면 다음 사진으로 변경하는 이미지 슬라이드 작성</h3>
+    <hr>
+    
+    <div class="carousel-wrapper">
+        <div class="carousel">
+            <img src="images/cup-1.jpg" alt="" >
+            <img src="images/cup-2.jpg" alt="" >
+            <img src="images/cup-3.jpg" alt="" >
+            <img src="images/cup-4.jpg" alt="" >
+        </div>
+   
+    </div>
+    <div id="slideButton">
+        <button id="prev">&lang;</button>
+        <button id="next">&rang;</button>    
+    </div>
+    <script src="js/image-slide.js">
+    </script>
+</body>
+</html>

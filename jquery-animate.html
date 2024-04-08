@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            width : 100px;
+            height : 100px;
+            background-color: red;
+            position:absolute;
+            left:10px;
+            top:100px;
+        }
+
+        .second {
+            width : 100px;
+            height : 100px;
+            background-color: red;
+            position:absolute;
+            left:10px;
+            top:300px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function(){
+                $('.first').animate({left:1000},1000,'swing');
+                $('.second').animate({left:1000},1000, 'linear');
+            });
+        })
+
+    </script>
+</head>
+<body>
+    <button class="btn">애니메이션-이동</button>
+    <hr>
+    <div class="first"></div>
+    <div class="second"></div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+$(document).ready(function() {
+    function handler(event){
+        $('<h1></h1>')
+            .text($(this).text())
+            .on('click', handler)
+            .appendTo('body');
+    };
+    $('h1').on('click', handler) ;
+}) -->
